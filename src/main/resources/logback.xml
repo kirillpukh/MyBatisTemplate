@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds" packagingData="true"  debug="true">
+    <property resource="application.yml"/>
+
+    <!-- begin : test -->
+    <appender name="consoleAppenderTest" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%date{dd-MM-yyyy HH:mm:ssZ} %-5level %logger{36}
+                -
+                %msg%n
+            </pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+    <!-- end : test -->
+
+    <logger name="testLogger" additivity="false">
+        <level value="DEBUG"/>
+        <appender-ref ref="consoleAppenderTest"/>
+    </logger>
+
+</configuration>

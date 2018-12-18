@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ru.mybatistmpl.db.persistence.TemplateMapper">
+
+    <select id="getAllFromGeneration" resultType="ru.mybatistmpl.template.Generation">
+        select *
+        from generation;
+    </select>
+
+    <select id="getAllFromMasking" resultType="ru.mybatistmpl.template.Masking">
+        select *
+        from masking;
+    </select>
+
+</mapper>
